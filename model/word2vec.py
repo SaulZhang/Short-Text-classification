@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
-
+'''
+word2vec预训练语言模型
+'''
 import logging  #日记相关配置模块
 from gensim.models import word2vec
 
@@ -11,7 +13,7 @@ class gensim.models.word2vec.Word2Vec(sentences=None,size=100,alpha=0.025,window
                                         iter=5,null_word=0, trim_rule=None, sorted_vocab=1, batch_words=10000)
 
 参数：
-·  sentences：可以是一个·list，对于大语料集，建议使用BrownCorpus,Text8Corpus或·lineSentence构建。
+·  sentences：可以是一个·ist，对于大语料集，建议使用BrownCorpus,Text8Corpus或·ineSentence构建。
 ·  sg： 用于设置训练算法，默认为0，对应CBOW算法；sg=1则采用skip-gram算法。
 ·  size：是指特征向量的维度，默认为100。大的size需要更多的训练数据,但是效果会更好. 推荐值为几十到几百。
 ·  window：表示当前词与预测词在一个句子中的最大距离是多少
