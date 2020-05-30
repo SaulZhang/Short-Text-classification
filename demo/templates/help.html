@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>帮助</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="shortcut icon" href="static/img/timg3.jpg" type="image/x-icon" />
+</head>
+<body>
+<header>
+    <img src="static/img/yemi.png" style="width: 100%;">
+    <div id="b">
+        <form  method=POST action="/help">
+<input type=submit name=help_btn value="帮助" style="width:60px;height:28px;background-color:#FE6714;color: white;" onmouseover="this.style.backgroundColor='#51a7e8';" onmouseout="this.style.backgroundColor='';">
+        </form>
+    </div>
+</header>
+<div class="container3">
+    <div id="a">
+        <h1 align="center">帮助文档</h1>
+<h2>1.软件名称</h2>
+ &nbsp;&nbsp;&nbsp;&nbsp; 商品文本分类(Commodity Text Classfication)
+<h2>2.软件功能</h2>
+  <h3>2.1 单条分类</h3>
+      &nbsp;&nbsp;&nbsp;&nbsp;在单条数据分类对应的文本输入框内输入商品名称，然后点击“单个数据分类”按钮，等待模型识别，识别结束后将跳转界面，输出分类结果。若要进行下一次分类，请点击“返回”按钮，重复执行上述操作。
+  <h3>2.2 批量分类</h3>
+      &nbsp;&nbsp;&nbsp;&nbsp;批量分类时，需要选择待识别的文件(该软件仅支持'.txt','.tsv'两种格式的文件，若选择其他格式的文件，软件将给出错误提示)，合法的文件格式为，第一行单独一行为"ITEM_NAME"表示标题(不包含其他分隔符，若文件的内容格式不正确，软件将会给出错误提示，具体内容格式如下图所示)，随后的每一行表示一件商品的名称。待选择正确格式内容的文件之后，点击"批量数据分类"按钮，等待模型识别，识别结束后将跳转界面，输出文件中前200条数据的分类结果。最终识别结果的文件将保存在工程文件夹中的'./result/'文件夹下面。
+      <div align="center">
+        <img src="../static/img/格式.png" >
+      </div>
+<h2>3.支持浏览器</h2>
+  &nbsp;&nbsp;&nbsp;&nbsp;Microsoft Edge 41.16299.967.0+、Firefox66.0.1+、Chrome72.0.3626.96+
+        <form  method=POST action="/"  align="center" >
+        <input type=submit name=back value="返回" onmouseover="this.style.backgroundColor='#51a7e8';" onmouseout="this.style.backgroundColor='';"/>
+        </form>
+        </div>
+</div>
+</body>
+</html>

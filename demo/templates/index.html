@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>服务外包A01数据处理</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="shortcut icon" href="static/img/timg3.jpg" type="image/x-icon" />
+</head>
+<body>
+<header>
+    <img src="static/img/yemi.png" style="width: 100%;">
+        <div id="b">
+        <form  method=POST action="/help">
+<input type=submit name=help_btn value="帮助" style="width:60px;height:28px;background-color:#FE6714;color: white;" onmouseover="this.style.backgroundColor='#51a7e8';" onmouseout="this.style.backgroundColor='';">
+        </form>
+    </div>
+</header>
+{% if error =='batch' %}
+        <script>
+            alert('还未选择数据文件！')
+        </script>
+{% elif error =='single' %}
+        <script>
+            alert('还未输入数据！')
+        </script>
+{% elif error =='wrong_format' %}
+        <script>
+            alert('输入数据文件格式有误！')
+        </script>
+{% endif %}
+<div class="container">
+            <form  method=POST action="/data_processing">
+            <input type=text name=text>
+            <input type=submit name=data_processing_btn value="单个数据分类" onmouseover="this.style.backgroundColor='#51a7e8';" onmouseout="this.style.backgroundColor='';"/>
+            </form>
+    <br>
+            <form action="/data_processing" method=POST enctype=multipart/form-data>
+            <input type=file name=file>
+            <input type=submit name=data_processing_btn value="批量数据分类" onmouseover="this.style.backgroundColor='#51a7e8';" onmouseout="this.style.backgroundColor='';"/>
+            <h4>需要分类批量数据时，请导入数据文件，支持后缀名为‘.txt’、‘.tsv’格式的文件</h4>
+<!--                <input type=submit name=data_processing_btn value="批量数据分类" onclick="alert('批量数据正在加载中，请稍后')"/>-->
+            </form>
+            </div>
+</body>
+</html>

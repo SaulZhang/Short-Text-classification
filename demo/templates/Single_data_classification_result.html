@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>服务外包A01单个数据处理结果</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="shortcut icon" href="static/img/timg3.jpg" type="image/x-icon" />
+</head>
+<body>
+<header>
+    <img src="static/img/yemi.png" style="width: 100%;">
+    <div id="b">
+        <form  method=POST action="/help">
+<input type=submit name=help_btn value="帮助" style="width:60px;height:28px;background-color:#FE6714;color: white;" onmouseover="this.style.backgroundColor='#51a7e8';" onmouseout="this.style.backgroundColor='';">
+        </form>
+    </div>
+</header>
+<script type="text/javascript">
+
+function altRows(id){
+
+	if(document.getElementsByTagName){
+
+		var table = document.getElementById(id);
+
+		var rows = table.getElementsByTagName("tr");
+
+		for(i = 0; i < rows.length; i++){
+
+			if(i % 2 == 0){
+
+				rows[i].className = "evenrowcolor";
+
+			}else{
+
+				rows[i].className = "oddrowcolor";
+
+			}
+
+		}
+
+	}
+
+}
+
+window.onload=function(){
+
+	altRows('alternatecolor');
+
+}
+
+</script>
+            <div class="container2">
+                <div id="a">
+         <h4>数据处理结果</h4>
+         <form  method=POST action="/">
+        <input type=submit name=back value="返回" onmouseover="this.style.backgroundColor='#51a7e8';" onmouseout="this.style.backgroundColor='';"/>
+        </form>
+                <br>
+         <table  class="form" id="alternatecolor">
+        <tr>
+        <th>ID</th>
+        <th>商品名称</th>
+        <th>顶级类目</th>
+        <th>二级类目</th>
+        <th>三级类目</th>
+        </tr>
+        <tr>
+        <td>{{ID}}</td>
+        <td>{{ITEM_NAME}}</td>
+        <td>{{TYPE_ONE}}</td>
+        <td>{{TYPE_TWO}}</td>
+        <td>{{TYPE_THREE}}</td>
+        </tr>
+        </table>
+                </div>
+            </div>
+</body>
+</html>

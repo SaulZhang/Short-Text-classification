@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>服务外包A01批量数据处理结果</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="shortcut icon" href="static/img/timg3.jpg" type="image/x-icon" />
+</head>
+<body>
+<header>
+    <img src="static/img/yemi.png" style="width: 100%;">
+    <div id="b">
+        <form  method=POST action="/help">
+<input type=submit name=help_btn value="帮助" style="width:60px;height:28px;background-color:#FE6714;color: white;" onmouseover="this.style.backgroundColor='#51a7e8';" onmouseout="this.style.backgroundColor='';">
+        </form>
+    </div>
+</header>
+<script type="text/javascript">
+
+function altRows(id){
+
+	if(document.getElementsByTagName){
+
+		var table = document.getElementById(id);
+
+		var rows = table.getElementsByTagName("tr");
+
+		for(i = 0; i < rows.length; i++){
+
+			if(i % 2 == 0){
+
+				rows[i].className = "evenrowcolor";
+
+			}else{
+
+				rows[i].className = "oddrowcolor";
+
+			}
+
+		}
+
+	}
+
+}
+
+window.onload=function(){
+
+	altRows('alternatecolor');
+
+}
+
+</script>
+        <div class="container2">
+            <div id="a">
+         <h1>数据处理完毕,已生成相应的文件</h1>
+         <h1>保存至:{{filename}}</h1>
+         <form  method=POST action="/">
+        <input type=submit name=back value="返回" onmouseover="this.style.backgroundColor='#51a7e8';" onmouseout="this.style.backgroundColor='';"/>
+        </form>
+             <br>
+        <table  class="form" id="alternatecolor">
+        <thread>
+         <tr>
+        <th>ID</th>
+        <th>商品名称</th>
+        <th>顶级类目</th>
+        <th>二级类目</th>
+        <th>三级类目</th>
+        </tr>
+        </thread>
+        <tbody>
+        <form method="POST">
+        {% for i in range(0,LENGTH):
+            %}
+        <tr>
+        <td>{{i+1}}</td>
+        <td>{{ITEM_NAME[i]}}</td>
+        <td>{{TYPE_ONE[i]}}</td>
+        <td>{{TYPE_TWO[i]}}</td>
+        <td>{{TYPE_THREE[i]}}</td>
+        </tr>
+            {% endfor %}
+        </form>
+        </tbody>
+        </table>
+            </div>
+            </div>
+</body>
+</html>
