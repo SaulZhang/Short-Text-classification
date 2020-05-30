@@ -35,7 +35,7 @@ numpy==1.14.2
 
 ## 3.dataset & pretrained model
 [public training dataset 50w](https://pan.baidu.com/s/1aSy3fxFNvsorfdq2LuK4pA)(提取码：ac2c)<br>
-[Attention-wight-norm-WithPositionEmbedding(0.9088).h5](https://pan.baidu.com/s/1vharQoMO2j_6iL0SYcsfLQ)(提取码：https://pan.baidu.com/s/1vharQoMO2j_6iL0SYcsfLQ)<br>
+[Attention-wight-norm-WithPositionEmbedding(0.9088).h5](https://pan.baidu.com/s/1vharQoMO2j_6iL0SYcsfLQ)(提取码：tf4a)<br>
 [GRUAttention(0.9175799998474121).h5](https://pan.baidu.com/s/1O-VCIsoPzbvol58ngVV43A)(提取码：epnq)<br>
 [TextBiLSTM-weightnorm(0.9156999999237061).h5](https://pan.baidu.com/s/1Ub-lcLeAb_EOEqVwStNNVw)(提取码：1u3b)<br>
 [word embedding matrix and the sentence length info of dataset](https://pan.baidu.com/s/1QN0e_LsjEvDU2FJ5QeLrow)(提取码：ki3e)<br>
