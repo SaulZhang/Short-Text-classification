@@ -1,5 +1,5 @@
 # Short-Text-classification
-第十届大学生服务外包大赛（一等奖解决方案）--A01商品短文本分类。基于Word2vec、CNN、Bi-LSTM、Attention、Adversarial等方法实现商品短文本分类任务。
+第十届大学生服务外包大赛（一等奖解决方案）--A01商品短文本分类。基于Word2vec、CNN、Bi-LSTM、Attention、Adversarial等方法实现商品短文本分类任务。并基于Flask框架开发模型的可视化交互软件，支持单条文本以及批量文本的分类处理。
 
 ## experiment result
 模型在50w数据集上的表现(训练集:测试集=40w:10w)
