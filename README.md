@@ -13,7 +13,7 @@
 |  Adversarial-BiLSTM-Attention（Char Embedding）| 0.844|
 |  Adversarial-BiLSTM-Attention（Word Embedding）| 0.871 |
 
-模型改进之后的结果（训练集:40w+半监督+爬虫数据验证集:10w）
+模型改进之后的结果（训练集:测试集=40w:10w）
 |  Model   | Accurancy  |
 |  ----  | ----  |
 |  Multi-Head-Attention|   0.9073 |
