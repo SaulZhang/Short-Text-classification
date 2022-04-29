@@ -51,4 +51,4 @@ numpy==1.14.2
 
 
 ## 6.Contributor
-[@Saul Zhang](https://github.com/SaulZhang)、[@zheng](https://github.com/1029127253)、[@searcher408](https://github.com/Searcher408)、[@nwpuGGBond](https://github.com/nwpu2016303311)、[@Chinazzh8796](https://github.com/Chinazzh8796)
+[@Saul Zhang](https://github.com/SaulZhang)、[@Caiyuan-Zheng](https://github.com/Caiyuan-Zheng)、[@searcher408](https://github.com/Searcher408)、[@jvyvkai](https://github.com/jvyvkai)、[@Chinazzh8796](https://github.com/Chinazzh8796)
