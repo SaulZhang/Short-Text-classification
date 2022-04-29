@@ -6,20 +6,12 @@
 
 |  Model   | Accurancy  |
 |  ----  | ----  |
-| TextCNN  | 0.848 |
-| BiLSTM  | 0.860 |
-| BiLSTM-Attention (Char Embedding)| 0.838 |
-| BiLSTM-Attention (Word Embedding)  | 0.861 |
-|  Adversarial-BiLSTM-Attention（Char Embedding）| 0.844|
-|  Adversarial-BiLSTM-Attention（Word Embedding）| 0.871 |
+| TextCNN  | 0.8820 |
+| BiLSTM  | 0.8990 |
+| BiLSTM-Attention| 0.9056 |
+| Adv-BiLSTM-Attention  | 0.9156 |
+|  TextCNN(word) +BiLSTM-Attention(word) +BiLSTM-Attention(char) +Adv-BiLSTM-Attention(word)+Adv-BiLSTM-Attention(char) [加权融合]| 0.9201|
 
-模型改进之后的结果（训练集:测试集=40w:10w）
-|  Model   | Accurancy  |
-|  ----  | ----  |
-|  Multi-Head-Attention|   0.9073 |
-|   BilSTM   |  0.9156  |
-|   0.42BiLSTM+0.58Attention(加权融合)|   0.9194 |
-|   0.67BiLSTM+0.09Attention+0.24BiLSTMAttention(加权融合)   |  0.9201  |
 
 ## 2.Requirement
 > Keras==2.0.5+
